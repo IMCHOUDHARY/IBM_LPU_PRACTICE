@@ -32,4 +32,17 @@ public class AccountServiceImpl implements AccountService {
 		// TODO Auto-generated method stub
 		return accountDAO.findByAccountNumber(accountNumber);
 	}
+	
+	public void deleteById(String accountNumber) {
+		accountDAO.deleteById(accountNumber);
+	}
+
+	public void updateById(String accountNumber)
+	{
+		accountDAO.updateById(accountNumber);
+	}
+
+	public void deleteAll() {
+		accountDAO.deleteAll();
+	}
 }
