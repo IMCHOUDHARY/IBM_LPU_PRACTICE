@@ -10,10 +10,24 @@
   	<description></description>
   	<servlet-class>com.example.ListLeagueServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>RegisterLeague</servlet-name>
+  	<display-name>RegisterLeague</display-name>
+  	<description></description>
+  	<servlet-class>com.example.RegisterLeague</servlet-class>
+  </servlet>
+  
+  
   <servlet-mapping>
   	<servlet-name>ListLeagueServlet</servlet-name>
   	<url-pattern>/list_leagues.view</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RegisterLeague</servlet-name>
+  	<url-pattern>/register.view</url-pattern>
+  </servlet-mapping>
+  
+  
   <welcome-file-list>
   	<welcome-file>welcome.html</welcome-file>
   </welcome-file-list>
