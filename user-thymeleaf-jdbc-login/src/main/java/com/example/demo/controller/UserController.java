@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.Employee;
 import com.example.demo.model.MyUser;
 
 @Controller
@@ -44,14 +45,18 @@ public class UserController {
 		model.addAttribute("user", new MyUser());
 		return "userForm";
 	}
-	@GetMapping(value = "/admin")
-	public String admin() {
-		return "<h3>Welcome Admin :)</h3>";
+	
+	@RequestMapping(value = "/admin")
+	public String admin(Model model) {
+		model.addAttribute("employee",new Employee());
+		return "adminpage";
 	}
+	
 
 	@GetMapping(value = "/user")
-	public String user() {
-		return "<h3>Hello User :)</h3>";
+	public String user() 
+	{
+		return "userpage";
 	}
 
 	@GetMapping(value = "/")
