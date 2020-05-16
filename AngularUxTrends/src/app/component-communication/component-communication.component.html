@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="alert alert-light border" *ngIf="toCart">
+    {{ cartProduct }} is added in the cart
+  </div>
+  <div class="row">
+    <div class =col-md-4>
+      <h4>Mobile</h4>
+      <button (click)="selectProduct('Mobile')" type="button" class="btn btn-outline-danger">Mobile</button>
+    </div>
+
+    <div class =col-md-4>
+      <h4>TV</h4>
+      <button (click)="selectProduct('TV')" type="button" class="btn btn-outline-danger">TV</button>
+    </div>
+
+    <div class =col-md-4>
+      <h4>Fridge</h4>
+      <button (click)="selectProduct('Fridge')" type="button" class="btn btn-outline-danger">Fridge</button>
+    </div>
+  </div>
+
+  <app-child-component [isSelected]="isSelected" [selectedProduct]="selectedProduct"></app-child-component>
+
+
+
+</div>
