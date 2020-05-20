@@ -23,10 +23,10 @@ export class ComponentCommunicationComponent implements OnInit {
     this.selectedProduct = product;
   }
 
-  addProduct()
+  addProduct(proData)
   {
-    this.toCart = true;
-    this.cartProduct = this.selectedProduct;
+    // this.toCart = true;
+    this.cartProduct = proData;
   }
 }
 

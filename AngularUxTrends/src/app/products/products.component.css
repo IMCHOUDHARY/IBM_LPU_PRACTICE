@@ -1,0 +1,9 @@
+.productImage{
+  height: 110px;
+  width: 50px;
+}
+
+.price{
+  font-weight: 600;
+  font-size: 18px;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row py-lg-5">
+    <div class="col-md-6">
+      <h4>User</h4>
+      <ng-container *ngFor="let user of Users; let i = index">
+        <p>{{ user }}      <button (click)="removeUser(i)" type="button" class="btn btn-danger">Remove</button> </p>
+      </ng-container>
+    </div>
+
+    <div class="col-md-6">
+      <h4>Admin</h4>
+      <ng-container *ngFor="let admin of Admins; let x = index">
+        <p>{{ admin }}      <button (click)="removeAdmin(x)" type="button" class="btn btn-danger">Remove</button> </p>
+      </ng-container>
+    </div>
+  </div>
+
+  <h3>Child Component</h3>
+
+  <app-exercise-child
+     [Users]="Users"
+     [Admins]="Admins"
+  ></app-exercise-child>
+
+</div>

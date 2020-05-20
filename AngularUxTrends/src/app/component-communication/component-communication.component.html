@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="alert alert-light border" *ngIf="toCart">
+  <div class="alert alert-light border" *ngIf="cartProduct">
     {{ cartProduct }} is added in the cart
   </div>
   <div class="row">
@@ -20,7 +20,11 @@
     </div>
   </div>
 
-  <app-child-component [isSelected]="isSelected" [selectedProduct]="selectedProduct"></app-child-component>
+  <app-child-component
+    [isSelected]="isSelected"
+    [selectedProduct]="selectedProduct"
+    (cartProduct)="addProduct($event)">
+  </app-child-component>
 
 
 

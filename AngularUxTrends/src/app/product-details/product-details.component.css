@@ -1,0 +1,24 @@
+.product_name{
+  font-size: 65px;
+}
+
+.product_desc{
+  font-size: 20px;
+}
+
+.pro_price{
+  margin-top: 17px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.buyNow{
+  border-radius: 15px;
+  width: 150px;
+}
+.image_size{
+  height: 60%;
+  padding-top: 70px;
+}
+
+
